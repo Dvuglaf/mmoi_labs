@@ -14,9 +14,9 @@ settings = {
 }
 
 # Save JSON string to vars.json and save setting into json_data
-with open('vars.json', 'w') as fp:
+with open('lab_0_vars.json', 'w') as fp:
     json.dump(settings, fp)
-with open('vars.json') as json_file:
+with open('lab_0_vars.json') as json_file:
     json_data = json.load(json_file)
 
 path = json_data['path_to_image']
