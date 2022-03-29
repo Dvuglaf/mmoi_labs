@@ -31,7 +31,7 @@ def help_thresholding(elem, threshold):
         return 0
 
 
-path = 'C://Users//aizee//Desktop//ssau//8//mmoi//lab1//imgs//14_LENA.TIF'
+path = 'C://Users//aizee//Desktop//ssau//8//mmoi//lab1//imgs//13_zelda.tif'
 image = imread(path)
 
 # @params:
@@ -187,7 +187,7 @@ plt.subplots_adjust(left=0.1,
                     hspace=0.4)
 show()
 
-# Массив гистограм исходного изображения
+# Массив гистограмм исходного изображения
 hist, bins = numpy.histogram(image.flatten(), 256, [0, 256])
 print("Histogram:")
 print(hist)
