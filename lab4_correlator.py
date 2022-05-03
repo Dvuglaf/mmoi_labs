@@ -17,6 +17,7 @@ def subplot(figure, n, m, pos, arr, title):
 def image_with_objects(background, count, obj):
     copy_background = copy.copy(background)
 
+    # Массив непересекающихся индексов для вставки объектов
     positions = np.array([[3, 3], [3, 13], [3, 23], [3, 33], [3, 43], [3, 53], [3, 60],
                           [13, 3], [13, 13], [13, 23], [13, 33], [13, 43], [13, 53], [13, 60],
                           [23, 3], [23, 13], [23, 23], [23, 33], [23, 43], [23, 53], [23, 60],
@@ -28,7 +29,7 @@ def image_with_objects(background, count, obj):
 
     for i in range(count):
         idx = positions[np.random.randint(0, len(positions))]
-        if copy_background[idx[0]][idx[1]] == 128:
+        if copy_background[idx[0]][idx[1]] == 128:  # Если на этом месте уже есть объект, то генерируем другой
             i -= 1
             continue
         copy_background[idx[0]][idx[1]] = 128
